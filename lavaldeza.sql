@@ -1,23 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.3
--- http://www.phpmyadmin.net
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 05-09-2018 a las 06:23:44
--- Versión del servidor: 5.6.24
--- Versión de PHP: 5.6.8
+-- Servidor: localhost:3306
+-- Tiempo de generación: 05-09-2018 a las 13:21:23
+-- Versión del servidor: 5.6.39-83.1
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `lavaldeza`
+-- Base de datos: `lavaldez_DB`
 --
 
 -- --------------------------------------------------------
@@ -26,12 +28,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `amenidades`
 --
 
-CREATE TABLE IF NOT EXISTS `amenidades` (
+CREATE TABLE `amenidades` (
   `id` int(11) NOT NULL,
   `imagen` varchar(500) DEFAULT NULL,
   `categoria` varchar(300) NOT NULL,
   `created_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `amenidades`
@@ -40,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `amenidades` (
 INSERT INTO `amenidades` (`id`, `imagen`, `categoria`, `created_at`) VALUES
 (17, 'amenidades-parque-2.jpg', 'Parque de juegos', '2018-09-03 06:39:16'),
 (18, 'amenidades-parque-22-min.jpg', 'Parque de juegos', '2018-09-03 06:46:36'),
-(19, 'amenidades-areas-verdes-4.jpg', 'Areas verdes', '2018-09-03 06:48:02'),
+(19, 'amenidades-areas-verdes-1.jpg', 'Areas verdes', '2018-09-03 06:48:02'),
 (20, 'amenidades-areas-verdes-3.jpg', 'Areas verdes', '2018-09-03 06:48:59'),
 (21, 'amenidades-areas-verdes-2.jpg', 'Areas verdes', '2018-09-03 06:49:22'),
 (22, 'amenidades-calles-concreto.jpg', 'Calles de concreto', '2018-09-03 06:50:20'),
@@ -53,10 +55,10 @@ INSERT INTO `amenidades` (`id`, `imagen`, `categoria`, `created_at`) VALUES
 -- Estructura de tabla para la tabla `avances`
 --
 
-CREATE TABLE IF NOT EXISTS `avances` (
+CREATE TABLE `avances` (
   `id` int(11) NOT NULL,
   `imagen` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `avances`
@@ -72,7 +74,7 @@ INSERT INTO `avances` (`id`, `imagen`) VALUES
 -- Estructura de tabla para la tabla `blogs`
 --
 
-CREATE TABLE IF NOT EXISTS `blogs` (
+CREATE TABLE `blogs` (
   `id` int(11) NOT NULL,
   `titulo` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `descripcion` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
@@ -80,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
   `img_inicio` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
   `img_noticia` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
   `texto` varchar(10000) CHARACTER SET latin1 DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `blogs`
@@ -97,7 +99,7 @@ INSERT INTO `blogs` (`id`, `titulo`, `descripcion`, `created_at`, `img_inicio`, 
 -- Estructura de tabla para la tabla `contacto`
 --
 
-CREATE TABLE IF NOT EXISTS `contacto` (
+CREATE TABLE `contacto` (
   `id` int(11) NOT NULL,
   `web` varchar(300) NOT NULL,
   `correo` varchar(300) NOT NULL,
@@ -109,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `contacto` (
   `waze` varchar(500) NOT NULL,
   `telefono1` varchar(30) NOT NULL,
   `telefono2` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `contacto`
@@ -124,7 +126,7 @@ INSERT INTO `contacto` (`id`, `web`, `correo`, `facebook`, `youtube`, `instagram
 -- Estructura de tabla para la tabla `planes`
 --
 
-CREATE TABLE IF NOT EXISTS `planes` (
+CREATE TABLE `planes` (
   `id` int(11) NOT NULL,
   `plan1_titulo` varchar(300) NOT NULL,
   `plan1_texto` text NOT NULL,
@@ -148,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `planes` (
   `incluye2` varchar(500) NOT NULL,
   `incluye3` varchar(300) NOT NULL,
   `incluye4` varchar(300) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `planes`
@@ -163,18 +165,18 @@ INSERT INTO `planes` (`id`, `plan1_titulo`, `plan1_texto`, `plan2_titulo`, `plan
 -- Estructura de tabla para la tabla `proyecto`
 --
 
-CREATE TABLE IF NOT EXISTS `proyecto` (
+CREATE TABLE `proyecto` (
   `id` int(11) NOT NULL,
   `texto` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `imagen` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `proyecto`
 --
 
 INSERT INTO `proyecto` (`id`, `texto`, `imagen`) VALUES
-(1, '      <p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">La Valdeza es un proyecto de 3000 viviendas de interÃ©s social de alta calidad con un diseÃ±o seguro, que garantiza la mayor funcionalidad a las familias al contar con una estructura y distribuciÃ³n adaptada a sus necesidades.</p><p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">Todas nuestras viviendas buscan brindar a las familias calidad de vida, por eso optimizamos espacio, maximizamos la luz natural, incluimos verjas y brindamos los mejores acabados.</p><p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">En La Valdeza sabemos que vivir mejor sÃ­ es posible, razÃ³n por la cual el proyecto incluye excelentes condiciones urbanÃ­sticas y cuenta con calles amplias, generosas Ã¡reas verdes, zonas de recreaciÃ³n y esparcimiento con caminerÃ­as y parques equipados.</p><ul style="word-wrap: break-word; list-style: none; margin-right: 0px; margin-left: 0px; padding: 0px 0px 10px; font-family: Raleway;"><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>EstÃ¡ conectado al IDAAN<img class="img-IDAAN" src="http://127.0.0.1/lavaldeza/img/IDAAN.png" style="word-wrap: break-word; max-width: 100%; vertical-align: bottom; margin: -10px 0px 0px 95px; width: 50px; position: absolute; height: auto !important;"></li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>Transporte dentro de la urbanizaciÃ³n</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>Modernas plantas de tratamiento</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>A 5 minutos de costa verde</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>Amplias calles de concreto</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>A 3 minutos de la interamericana</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>Cerca de todo</li><li style="word-wrap: break-word; padding: 5px 0px; line-height: 16px;"><span class="icon icon-checkmark" style="word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;">&nbsp;</span>Excelentes acabados</li></ul>      ', 'la-valdeza-mapa-editado-min.jpg');
+(1, '      <p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">La Valdeza es un proyecto de 3000 viviendas de interÃ©s social de alta calidad con un diseÃ±o seguro, que garantiza la mayor funcionalidad a las familias al contar con una estructura y distribuciÃ³n adaptada a sus necesidades.</p><p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">Todas nuestras viviendas buscan brindar a las familias calidad de vida, por eso optimizamos espacio, maximizamos la luz natural, incluimos verjas y brindamos los mejores acabados.</p><p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">En La Valdeza sabemos que vivir mejor sÃ­ es posible, razÃ³n por la cual el proyecto incluye excelentes condiciones urbanÃ­sticas y cuenta con calles amplias, generosas Ã¡reas verdes, zonas de recreaciÃ³n y esparcimiento con caminerÃ­as y parques equipados.</p><ul style=\"word-wrap: break-word; list-style: none; margin-right: 0px; margin-left: 0px; padding: 0px 0px 10px; font-family: Raleway;\"><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>EstÃ¡ conectado al IDAAN<img class=\"img-IDAAN\" src=\"http://127.0.0.1/lavaldeza/img/IDAAN.png\" style=\"word-wrap: break-word; max-width: 100%; vertical-align: bottom; margin: -10px 0px 0px 95px; width: 50px; position: absolute; height: auto !important;\"></li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>Transporte dentro de la urbanizaciÃ³n</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>Modernas plantas de tratamiento</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>A 5 minutos de costa verde</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>Amplias calles de concreto</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>A 3 minutos de la interamericana</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>Cerca de todo</li><li style=\"word-wrap: break-word; padding: 5px 0px; line-height: 16px;\"><span class=\"icon icon-checkmark\" style=\"word-wrap: break-word; font-family: icomoon; line-height: 1; color: rgb(46, 86, 41); padding-right: 10px;\">&nbsp;</span>Excelentes acabados</li></ul>      ', 'la-valdeza-mapa-editado-min.jpg');
 
 -- --------------------------------------------------------
 
@@ -182,17 +184,17 @@ INSERT INTO `proyecto` (`id`, `texto`, `imagen`) VALUES
 -- Estructura de tabla para la tabla `quienessomos`
 --
 
-CREATE TABLE IF NOT EXISTS `quienessomos` (
+CREATE TABLE `quienessomos` (
   `id` int(11) NOT NULL,
   `texto` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `quienessomos`
 --
 
 INSERT INTO `quienessomos` (`id`, `texto`) VALUES
-(1, '<p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">Somos un grupo empresarial con mÃ¡s de 50 aÃ±os de experiencia en construcciÃ³n de proyectos de vivienda de interÃ©s social. Nuestro norte es ofrecer a las familias soluciones habitacionales con altos estÃ¡ndares de calidad, funcionalidad y durabilidad, con el fin de mejorar su calidad de vida.</p><p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">Nuestra visiÃ³n es de largo plazo, por eso trabajamos de la mano de la comunidad y de las autoridades para promover el desarrollo sostenible de las zonas donde operamos, y nuestro equipo estÃ¡ abocado a ofrecer un servicio de excelencia en todo momento a nuestros clientes..</p><p style="word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;">En nuestros 10 aÃ±os de trayectoria en PanamÃ¡ hemos desarrollado proyectos que se traducen en mÃ¡s de 1000 viviendas entregadas y por ende mÃ¡s de 5000 personas que hoy cuentan con un sueÃ±o hecho realidad.</p>');
+(1, '<p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">Somos un grupo empresarial con mÃ¡s de 50 aÃ±os de experiencia en construcciÃ³n de proyectos de vivienda de interÃ©s social. Nuestro norte es ofrecer a las familias soluciones habitacionales con altos estÃ¡ndares de calidad, funcionalidad y durabilidad, con el fin de mejorar su calidad de vida.</p><p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">Nuestra visiÃ³n es de largo plazo, por eso trabajamos de la mano de la comunidad y de las autoridades para promover el desarrollo sostenible de las zonas donde operamos, y nuestro equipo estÃ¡ abocado a ofrecer un servicio de excelencia en todo momento a nuestros clientes..</p><p style=\"word-wrap: break-word; margin-bottom: 10px; padding: 0px; font-family: Raleway; line-height: 30px;\">En nuestros 10 aÃ±os de trayectoria en PanamÃ¡ hemos desarrollado proyectos que se traducen en mÃ¡s de 1000 viviendas entregadas y por ende mÃ¡s de 5000 personas que hoy cuentan con un sueÃ±o hecho realidad.</p>');
 
 -- --------------------------------------------------------
 
@@ -200,13 +202,13 @@ INSERT INTO `quienessomos` (`id`, `texto`) VALUES
 -- Estructura de tabla para la tabla `seccionmas`
 --
 
-CREATE TABLE IF NOT EXISTS `seccionmas` (
+CREATE TABLE `seccionmas` (
   `id` int(11) NOT NULL,
   `img_popup_1` varchar(500) NOT NULL,
   `img_popup_2` varchar(500) NOT NULL,
   `img_popup_3` varchar(500) NOT NULL,
   `img_popup_4` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `seccionmas`
@@ -221,10 +223,10 @@ INSERT INTO `seccionmas` (`id`, `img_popup_1`, `img_popup_2`, `img_popup_3`, `im
 -- Estructura de tabla para la tabla `sliders`
 --
 
-CREATE TABLE IF NOT EXISTS `sliders` (
+CREATE TABLE `sliders` (
   `id` int(11) NOT NULL,
   `imagen` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `sliders`
@@ -240,11 +242,11 @@ INSERT INTO `sliders` (`id`, `imagen`) VALUES
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `clave` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -259,14 +261,14 @@ INSERT INTO `usuarios` (`id`, `usuario`, `clave`) VALUES
 -- Estructura de tabla para la tabla `videos`
 --
 
-CREATE TABLE IF NOT EXISTS `videos` (
+CREATE TABLE `videos` (
   `id` int(11) NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `link` varchar(500) NOT NULL,
   `imagen` varchar(500) DEFAULT NULL,
   `principal` tinyint(1) NOT NULL,
   `created_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `videos`
@@ -356,57 +358,69 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT de la tabla `amenidades`
 --
 ALTER TABLE `amenidades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
 -- AUTO_INCREMENT de la tabla `avances`
 --
 ALTER TABLE `avances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
 --
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `planes`
 --
 ALTER TABLE `planes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `quienessomos`
 --
 ALTER TABLE `quienessomos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `seccionmas`
 --
 ALTER TABLE `seccionmas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
