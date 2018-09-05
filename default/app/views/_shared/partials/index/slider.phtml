@@ -1,0 +1,62 @@
+<div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-source="gallery" >
+                    <!-- START REVOLUTION SLIDER 5.3.0.2 fullscreen mode -->
+                    <div id="rev_slider_1_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
+                        <img src="<?php echo PUBLIC_PATH.'img/fondomovi.jpg' ?>" class="image-ivis" style="
+                            position: absolute;
+                            top: 135px;
+                            left: 50px;
+                            width: 100px;
+                            z-index: 99;
+                        ">
+                        <ul>
+                        <?php foreach ($sliders as $key => $value): ?>
+                            <!-- SLIDE 1  -->
+                            <li data-index="rs-<?php echo $key?>" data-transition="crossfade" 
+                                data-slotamount="default" data-hideafterloop="0" 
+                                data-hideslideonmobile="off" data-easein="default" 
+                                data-easeout="default" data-masterspeed="default" 
+                                data-thumb="<?php echo PUBLIC_PATH.'files/upload/slider/'.$value->imagen ?>" data-rotate="0" 
+                                data-fstransition="fade" data-fsmasterspeed="300" 
+                                data-fsslotamount="7" data-saveperformance="off" data-title="La Valdeza" 
+                                data-param1="" data-param2="" data-param3="" data-param4="" 
+                                data-param5="" data-param6="" data-param7="" data-param8="" 
+                                data-param9="" data-param10="" data-description="">
+                   
+                                <img 
+                                    src="<?php echo PUBLIC_PATH.'files/upload/slider/'.$value->imagen ?>" 
+                                    alt="" title="La Valdeza" width="600" 
+                                    height="810" data-bgposition="center center" 
+                                    data-kenburns="on" data-duration="10000" 
+                                    data-scalestart="1" data-scaleend="1" data-rotatestart="0" 
+                                    data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" 
+                                    data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            
+                                <!--<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-1-layer-1" 
+                                data-x="['left','left','left','left']" data-hoffset="['-80','-1','-3','70']" 
+                                data-y="['middle','middle','middle','middle']" data-voffset="['160','-100','-100','-109']" 
+                                data-fontsize="['34','45','40','20']" data-lineheight="['55','55','50','30']" 
+                                data-width="['700','800','720','300']" data-height="['none','none','none','none']" 
+                                data-whitespace="normal" data-type="text" data-responsive_offset="on" 
+                                data-frames='[{"delay":900,"speed":1000,"frame":"0","from":"x:[-100%];
+                                z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;
+                                s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},
+                                {"delay":"wait","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeOut"}]' 
+                                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" 
+                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" 
+                                style="z-index: 5; min-width: 888px; max-width: 888px; white-space: normal;
+                                font-size: 62px; line-height: 72px; font-weight: 700; color: #fff;font-family:Raleway;
+                                background:rgba(130, 182, 6, 0.5);text-transform:uppercase;padding:20px;color:#fff">
+                                En la chorrera viviendas de <span style="color:#fff;font-size: 50px;text-transform: none;" >3</span> recamaras. <br>
+                                    <span style="color:#fff;font-size: 31px;text-transform: none;">
+                                    La mejor opción al mejor precio.
+                                    </span></div>-->
+                               
+                            </li>
+                        <?php endforeach; ?> 
+                        </ul>
+
+                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                    </div>
+
+                </div>
+                <!-- END REVOLUTION SLIDER -->

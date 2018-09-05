@@ -1,0 +1,58 @@
+<br>
+<!-- sliders table -->
+<?php View::content() ?>
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title">
+            <i class="icon-paragraph-justify2"></i> Listado de Videos</h6>
+          <a class="btn btn-primary" style="float:right;"
+          href="<?php echo PUBLIC_PATH.'admin/agregar_video/' ?>">
+            <i class="icon-plus"></i> Agregar Video
+          </a>
+        </div>
+          <div class="datatable">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                        <th class="task-tools"></th>
+                        <th class="task-tools"></th>
+                          <th class="task-tools text-center">Titulo</th>
+                          <th class="task-tools text-center">Principal</th>
+                          <th class="task-tools text-center">Editar</th>
+                          <th class="task-tools text-center">Eliminar</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($videos as $key => $value): ?>
+                      <tr>
+                        <td width="1px" class="text-center">
+                          <?php echo $value->id ?>
+                        </td>
+                        <td class="text-center">
+                          <img src="<?php echo PUBLIC_PATH.'files/upload/videos/'.$value->imagen ?>" alt="" width="50px">
+                        </td>
+                        <td>
+                          <?php echo $value->titulo ?>
+                        </td>
+                        <td>
+                          <?php if($value->principal == 1){echo 'Si';}else{echo 'No';} ?>
+                        </td>
+                        <td class="text-center">
+                          <div class="btn-group">
+                               <a href="<?php echo PUBLIC_PATH.'admin/editar_video/'.$value->id.'/' ?>" class="btn btn-icon btn-success">
+                                 <i class="icon-quill2"></i>
+                               </a>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="btn-group">
+                               <a href="<?php echo PUBLIC_PATH.'admin/eliminar_video/'.$value->id.'/' ?>" class="btn btn-icon btn-danger"><i class="icon-remove"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+<!-- /sliders table -->

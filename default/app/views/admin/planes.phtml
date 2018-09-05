@@ -1,0 +1,232 @@
+<style media="screen">
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 50px;
+    margin-left: 0px;
+  }
+  .icon-plan{
+    color: #fff;
+    width: 100px;
+    height: 69px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+</style>
+<br>
+<!-- Callout -->
+<div class="callout callout-danger fade in">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <h5>Importante!</h5>
+  <p>Tome en cuenta las medidas indicadas para cada imagen, recuerde si no sigue estas reglas implicara una incorrecta visualizacion en la pagina.</p>
+  <p><?php View::content() ?></p>
+</div>
+      <!-- /callout -->
+    <!-- WYSIWYG editor -->
+<form class="block" action="" enctype="multipart/form-data" method="POST" role="form">
+  <h6><i class="icon-pencil"></i>Sección Escoge tu plan</h6>
+  <input type="hidden" name="sobre_mi[id]" value="<?php echo $sobre_mi->id ?>">
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <img src="<?php echo PUBLIC_PATH.'img_mela/item1.png' ?>" alt="" width="50%">
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.plan1_titulo', array(
+          'placeholder'=>"Titulo..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.plan1_texto', array(
+          'placeholder'=>"Descripcion..",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <img src="<?php echo PUBLIC_PATH.'img_mela/item2.png' ?>" alt="" width="50%">
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.plan2_titulo', array(
+          'placeholder'=>"Titulo..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.plan2_texto', array(
+          'placeholder'=>"Descripcion..",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <img src="<?php echo PUBLIC_PATH.'img_mela/item3.png' ?>" alt="" width="50%">
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.plan3_titulo', array(
+          'placeholder'=>"Titulo..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.plan3_texto', array(
+          'placeholder'=>"Descripcion..",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <h6><i class="icon-pencil"></i>Sección Planes Efecto Mela</h6>
+  <input type="hidden" name="planes[id]" value="<?php echo $planes->id ?>">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <img src="<?php echo PUBLIC_PATH.'images/icons/ico_01.png' ?>" alt="" width="25%">
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.valor1', array(
+          'placeholder'=>"Valor..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.por1', array(
+          'placeholder'=>"por..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.extra1', array(
+          'placeholder'=>"extra..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.incluye1', array(
+          'placeholder'=>"incluye..",
+          'required'=>"true",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <img src="<?php echo PUBLIC_PATH.'img_mela/corazon.png' ?>" alt="" width="34%">
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.valor2', array(
+          'placeholder'=>"Valor..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.por2', array(
+          'placeholder'=>"por..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.extra2', array(
+          'placeholder'=>"extra..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.incluye2', array(
+          'placeholder'=>"incluye..",
+          'required'=>"true",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group " style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <i class="flaticon-like icon-plan"></i>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.valor3', array(
+          'placeholder'=>"Valor..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.por3', array(
+          'placeholder'=>"por..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.extra3', array(
+          'placeholder'=>"extra..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.incluye3', array(
+          'placeholder'=>"incluye..",
+          'required'=>"true",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group" style="background-color: rgba(119, 119, 119, 0.29);text-align:center;">
+        <i class="flaticon-avatar icon-plan"></i>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.valor4', array(
+          'placeholder'=>"Valor..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('planes.por4', array(
+          'placeholder'=>"por..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.extra4', array(
+          'placeholder'=>"extra..",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::textarea('planes.incluye4', array(
+          'placeholder'=>"incluye..",
+          'class'=>"form-control",
+          'rows'=>"10",
+          'cols'=>"5"
+        )) ?>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <button type="reset" class="btn btn-danger">Cancelar</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+
+</form>

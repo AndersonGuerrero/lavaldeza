@@ -1,0 +1,36 @@
+<br>
+<!-- sliders table -->
+<?php View::content() ?>
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title"><i class="icon-paragraph-justify2"></i> Listado de Avances</h6>
+          <a class="btn btn-primary" style="float:right;" href="<?php echo PUBLIC_PATH.'admin/agregar_avance/' ?>">
+            <i class="icon-plus"></i> Agregar avance
+          </a>
+        </div>
+          <div class="datatable">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th class="task-tools text-center">Imagen</th>
+                          <th class="task-tools text-center">Eliminar</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($avances as $key => $value): ?>
+                      <tr>
+                        <td class="text-center">
+                          <img src="<?php echo PUBLIC_PATH.'files/upload/avance-obras/'.$value->imagen ?>" alt="" width="50px">
+                        </td>
+                        <td class="text-center">
+                          <div class="btn-group">
+                               <a href="<?php echo PUBLIC_PATH.'admin/eliminar_avance/'.$value->id.'/' ?>" class="btn btn-icon btn-danger"><i class="icon-remove"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+<!-- /sliders table -->

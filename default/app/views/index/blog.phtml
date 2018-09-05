@@ -1,0 +1,53 @@
+<header class="rich-header page-header version1" data-parallax="false" style="background-color:#333333;">
+                    <div class="container nz-clearfix">
+
+                        <div class="rh-content">
+                            <h1 style="color:#ffffff;">Noticias y Eventos</h1>
+                           
+                        </div>
+
+                    </div>
+                </header>
+                <div id="nz-content" class='content nz-clearfix padding-false'>
+                    
+                     <div class="lazy blog-layout-wrap medium sidebar-false" id="nz-target">
+
+                    <div class="container">
+                        <section class='content nz-clearfix'>
+                            <section class="main-content left">
+                                <div class="blog-post">
+
+                                    <article data-grid="ninzio_01" class="post-195 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-eva tag-external tag-free tag-logo tag-repairing tag-shopping tag-smart" id="post-195">
+                                        <div class="nz-thumbnail"><img src="<?php echo PUBLIC_PATH.'files/upload/blog/'.$blog->id.'/'.$blog->img_noticia ?>" class="attachment-full size-full wp-post-image" alt="" width="100%" /></div>
+                                        <div class="post-body">
+
+                                            <h1 class="post-title" style="margin-top:30px"><?php echo $blog->titulo ?></h1>
+
+                                            <div class="single-post-content">
+                                                <p><?php echo $blog->texto ?></p>
+                                            </div>
+                                        </div>    
+
+                                    </article>
+                                    </div>
+                            </section>
+                             <aside class="sidebar">
+                                <aside class='blog-widget-area widget-area '>
+                                    <div id="categories-4" class="widget widget_categories">
+                                        <h6 class="widget_title">Noticias y eventos recientes</h6>
+                                        <ul>
+                                        <?php foreach ($blogs as $key => $value): ?>
+                                          <li class="cat-item cat-item-6">
+                                            <a href="<?php echo PUBLIC_PATH.'blog/'.str_replace(' ', '-', $value->titulo).'/' ?>">Promotora Valdeza participó en Expo Inmobiliaria 2017 </a>
+                                          </li>
+                                        <?php endforeach;?>    
+                                        </ul>
+                                    </div>
+
+                                </aside>
+                            </aside>
+
+                        </section>
+                    </div>
+
+                </div>

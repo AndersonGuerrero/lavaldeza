@@ -1,0 +1,48 @@
+<br>
+<!-- Callout -->
+<div class="callout callout-danger fade in">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <h5>Importante!</h5>
+  <p>Tome en cuenta las medidas indicadas para cada imagen, recuerde si no sigue estas reglas implicara una incorrecta visualizacion en la pagina.</p>
+  <p><?php View::content() ?></p>
+</div>
+      <!-- /callout -->
+    <!-- WYSIWYG editor -->
+<form class="block" action="" enctype="multipart/form-data" method="POST" role="form">
+  <h6><i class="icon-plus"></i>Nuevo video</h6>
+  <input type="hidden" name="video[id]" value="<?php echo $contacto->id ?>">
+  <div class="row" style="">
+    <div class="col-xs-8">
+      <div class="form-group">
+        <?php echo Form::text('video.titulo', array(
+          'placeholder'=>"Titulo..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+        <?php echo Form::text('video.link', array(
+          'placeholder'=>"Link..",
+          'required'=>"true",
+          'class'=>"form-control",
+        )) ?>
+      </div>
+      <div class="form-group">
+          <select class="form-control" required name="video[principal]">
+            <option value="">Video principal?</option>
+            <option value="1">Si</option>
+            <option value="0">No</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label>Imagen (800x500)</label>
+        <input type="file" class="styled" required accept="image/jpeg,image/gif,image/x-png," name="imagen_selected" id="adjunto">
+      </div>
+    </div>
+    <div class="text-right col-xs-8">
+      <button type="reset" class="btn btn-danger">Cancelar</button>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+
+</form>

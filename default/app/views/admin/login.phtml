@@ -1,0 +1,34 @@
+<!-- Login wrapper -->
+<div class="login-wrapper">
+    <form  class="login" action="#" method="POST" role="form">
+    <div class="popup-header">
+
+      <span class="text-semibold">Login - Administrador</span>
+
+    </div>
+    <div class="well">
+      <div class="form-group has-feedback">
+        <label>Usuario</label>
+        <input type="text" name="usuarios[usuario]" class="form-control" placeholder="usuario">
+        <i class="icon-users form-control-feedback"></i>
+      </div>
+
+      <div class="form-group has-feedback">
+        <label>Clave</label>
+        <input type="password" name="usuarios[clave]" class="form-control" placeholder="clave">
+        <i class="icon-lock form-control-feedback"></i>
+      </div>
+
+      <div class="row form-actions">
+        <div class="col-xs-12">
+          <?php View::content() ?>
+        </div>
+
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-warning pull-right"><i class="icon-menu2"></i> Acceder</button>
+        </div>
+      </div>
+    </div>
+    </form>
+</div>
+<!-- /login wrapper -->

@@ -1,0 +1,119 @@
+<div id="blog" class="ds title-block section_padding_top_150 section_padding_bottom_10" style="background:#4F3847">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="title-block-02 text-center" style="color:#422E3B;opacity:0.9;text-transform:none">Blog</p>
+        <h3 class="title-block-01 text-center">BLOG - SALUD ES BELLEZA </h3>
+        <p style="color:#fff;margin-top:20px;text-align:center">Mis consejos de alimentación, culto a la vida sana, recetas, suplementos, vitaminas y <br>
+          productos de belleza que podrán ayudarte a lograr tus objetivos así como lo hice yo. <br>
+          Tambien te paso los mejores datos adquiridos de personas que sigo y <br>
+          me llenan de mucha motivacion.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ds section_padding_top_60 section_padding_bottom_10" style="background:#4F3847">
+  <div class="container" style="padding-top:40px">
+    <div class="row">
+      <?php foreach ($blogs as $key => $value): ?>
+        <div class="col-sm-4 col-md-4 col-lg-4" style="min-height:700px;">
+            <div class="classes-01">
+            <figure class="classes-01__img">
+              <a href="<?php echo PUBLIC_PATH.'index/blog/'.$value->id.'/' ?>">
+                <img src="<?php echo PUBLIC_PATH.'files/upload/blogs/'.$value->img_inicio ?>" alt="" style="width:100%;height:350px">
+              </a>
+            </figure>
+            <div class="classes-01__content" style="min-height:235px;">
+              <div class="classes-01__meta">
+                <p class="classes-01__meta-date"><?php echo (new DateTime($value->created_at))->format('d-m-Y')?></p>
+
+              </div>
+              <div class="classes-01__content-wrapp" style="min-height:237px;">
+                <h3 class="classes-01__title" style="min-height:50px">
+                  <a href="<?php echo PUBLIC_PATH.'index/blog/'.$value->id.'/' ?>"><?php echo substr($value->titulo, 0, 50) ?>
+              <?php if ($value->subtitulo !=''):?>
+                <br><small style="font-size:11px;font-weight:bold;"><?php echo substr($value->subtitulo, 0, 50) ?></small>
+              <?php endif ?>
+              </a>
+                </h3>
+                <p class="classes-01__text"><?php echo substr($value->descripcion, 0, 70).'...' ?></p>
+              </div>
+              <a href="<?php echo PUBLIC_PATH.'index/blog/'.$value->id.'/' ?>" class="classes-01__button">leer mas</a>
+            </div>
+            </div>
+            </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</div>
+
+<div id="contacto" class="ds contact-01 section_padding_top_100 section_padding_bottom_100">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-md-7 col-lg-7" style="margin-bottom:50px">
+        <form class="contact-form contact-form-01 columns_padding_5" method="post" action="/" style="background:none">
+
+          <input type="hidden" name="subject" value="Mensaje de Contacto">
+
+          <h3 class="contact-form-01__title" style="color:#E6E7E8">Formulario de Contacto</h3>
+          <div style="padding:0" class="contact-form-name col-xs-12">
+            <input type="text" aria-required="true" size="28" value="" name="name" id="name" class="form-control" placeholder="Nombre Completo">
+          </div>
+          <div style="padding:0" class="contact-form-email col-xs-12">
+            <input type="email" aria-required="true" size="28" value="" name="email" id="email" class="form-control" placeholder="Correo">
+          </div>
+          <div style="padding:0;padding-right:10px" class="contact-form-subject col-xs-4">
+            <input type="text" aria-required="true" size="28" value="" name="edad" id="edad" class="form-control" onkeypress="return soloNumeros(event)" maxlength="2" placeholder="Edad">
+          </div>
+          <div style="padding:0" class="contact-form-subject col-xs-8">
+            <input type="text" aria-required="true" size="28" value="" name="telefono" id="telefono" class="form-control" placeholder="Telefono">
+          </div>
+          <div style="padding:0" class="contact-form-message col-xs-12">
+            <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Comentario"></textarea>
+            <button type="submit" id="contact_form_submit" name="contact_submit" class="contact-form-01__button">Enviar</button>
+          </div>
+        </form>
+      </div>
+      <br>
+      <div class="col-sm-5 col-md-5 col-lg-5">
+        <div class="to_animate" data-animation="pullDown" style="margin-bottom:30px">
+          <div class="teaser text-center">
+            <div class="teaser_icon highlight size_normal">
+              <i class="rt-icon2-mail"></i>
+            </div>
+
+          </div>
+          <div class="widget_text">
+            <h3 class="widget-title">Ubicación</h3>
+            <p>Panamá, Ciudad de Panamá </p>
+            <div class="border-paragraphs">
+
+              <p>
+                <i class="rt-icon2-globe-outline highlight"></i>
+                <a href="./">www.efectomela.com</a>
+              </p>
+              <p>
+                <i class="rt-icon2-mail2 highlight"></i>
+                <a href="mailto:info@efectomela.com">info@efectomela.com</a>
+              </p>
+
+            </div>
+
+          </div>
+            <div class="widget_text">
+          <h3 class="widget-title">Sígueme en mis redes sociales</h3>
+          <p>
+            <a href="#" class="social-icon color-icon bg-icon soc-facebook" target="_blank"></a>
+            <a href="https://www.youtube.com/channel/UCsLN8nmWRc1hqt9ZTEaLaxA" class="social-icon color-icon bg-icon soc-youtube" target="_blank"></a>
+            <a href="https://www.instagram.com/melapiedrahita/" class="social-icon color-icon bg-icon soc-instagram" target="_blank"></a>
+
+          </p>
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

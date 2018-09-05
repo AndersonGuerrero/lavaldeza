@@ -1,0 +1,787 @@
+<div id="el_proyecto" class="nz-section horizontal autoheight-true animate-false full-width-false " data-animation-speed="35000" data-parallax="false" style="padding-top:20px;">
+    <div class="container" style="width:80%;">
+        <div class="nz-row">
+            <div class="col-sm-12" style="padding-bottom:30px">
+                <div class="element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                    <div class="col-inner">
+                        <div class="nz-tabs  horizontal full-false">
+                            <div class="tabset nz-clearfix">
+                                <div data-target="detalleproyecto" class="tab false" style="padding-top: 5px;padding-bottom: 0px;">
+                                    <h2 style="text-transform:uppercase;">El proyecto</h2>
+                                </div>
+                            </div>
+                            <div class="tabs-container nz-clearfix">
+                                <div id="detalleproyecto" class="tab-content">
+                                    <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+                                        <div class="col-inner">
+                                            <a data-lightbox-gallery="gallery14" href="<?php echo PUBLIC_PATH.'files/upload/project/la-valdeza-mapa-editado-min.jpg' ?>">
+                                                <img class="aligncenter size-full wp-image-6692 " 
+                                                src="<?php echo PUBLIC_PATH.'files/upload/project/'.$proyecto->imagen ?>" width="100%">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                                        <div class="col-inner">
+                                            <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                                <div class="nz-separator solid" style="border-bottom-color:#A7CC39;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-bottom:20px;">&nbsp;</div>
+                                            </div>
+                                            <div class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50">
+                                            
+                                            <?php echo $proyecto->texto ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nz-section parallax_icon" style="margin-bottom:15px;">
+
+    <div class="container">
+        <div class="nz-row">
+            <div class="col vc_col-sm-12 col12  element-animate-false valign-top" id="div_a96c_16" none"=" data-align="left" style="padding-top:50px">
+                <div style="z-index:9999;position:relative">
+                    <h2 style="font-size: 30px;color: #FFF;line-height: 40px;text-align: center" class="vc_custom_heading">AMENIDADES</h2>
+                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                        <div class="nz-separator solid" style="border-bottom-color:#FFB700;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                    </div>
+                <div class="col-inner">
+                        <div class="col vc_col-sm-3 vc_col-lg-3 vc_col-md-3 vc_col-xs-12 col12">
+                            <p>
+                            <?php 
+                            $query = $amenidades->find("conditions: categoria like 'Parque de juegos'");
+                            foreach ($query as $key => $value):?>
+                                    <?php if($key===0):?>
+                                        <a data-lightbox-gallery="gallery11" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Parque-de-juegos/'.$value->imagen ?>">
+                                            <center>
+                                                <img src="<?php echo PUBLIC_PATH.'img/iconoa.png' ?>" alt="" width="80%">
+                                                <span class="count-title" style="color:#B1D234">parque de juegos</span>
+                                            </center>
+                                        </a>
+                                    <?php else:?>
+                                        <a data-lightbox-gallery="gallery11" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Parque-de-juegos/'.$value->imagen ?>"></a>
+                                    <?php endif;?>
+                            
+                            <?php endforeach; ?>
+                            </p>
+                        </div>
+                        <div class="col vc_col-sm-3 vc_col-lg-3 vc_col-md-3 vc_col-xs-12 col12">
+                            <p>
+                            <?php foreach ($amenidades->find("conditions: categoria like 'Areas verdes'") as $key => $value): ?>
+                                <?php if($key==0):?>
+                                    <a data-lightbox-gallery="gallery12" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Areas-verdes/'.$value->imagen ?>">
+                                        <center>
+                                            <img src="<?php echo PUBLIC_PATH.'img/iconob.png' ?>" alt="" width="80%">
+                                            <span class="count-title" style="color:#B1D234">Áreas verdes</span>
+                                        </center>
+                                    </a>
+                                <?php else: ?>
+                                    <a data-lightbox-gallery="gallery12" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Areas-verdes/'.$value->imagen ?>"></a>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            </p>
+                            
+                        </div>
+                        <div class="col vc_col-sm-3 vc_col-lg-3 vc_col-md-3 vc_col-xs-12 col12">
+                            <p>
+                            <?php foreach ($amenidades->find("conditions: categoria = 'Calles de concreto'") as $key => $value): ?> 
+                               
+                                <? if($key==0): ?>
+                                    <a data-lightbox-gallery="gallery13" href='<?php echo PUBLIC_PATH."files/upload/amenidades/Calles-de-concreto/".$value->imagen ?>'>
+                                        <center>
+                                            <img src="<?php echo PUBLIC_PATH.'img/iconoc.png' ?>" alt="" width="80%">
+                                            <span class="count-title" style="color:#B1D234">calles de concreto</span>
+                                        </center>
+                                    </a>
+                                <? else: ?>
+                                    <a data-lightbox-gallery="gallery13" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Calles-de-concreto/'.$value->imagen ?>"></a>
+                                <? endif; ?>
+                            <?php endforeach; ?>
+                            </p>
+                        </div>
+                        <div class="col vc_col-sm-3 vc_col-lg-3 vc_col-md-3 vc_col-xs-12 col12">
+                            <p>
+                            <?php foreach ($amenidades->find("conditions: categoria like 'Amplio boulevard'") as $key => $value): ?>
+                                <?php if($key==0):?>
+                                    <a data-lightbox-gallery="gallery15" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Amplio-boulevard/'.$value->imagen?>">
+                                        <center>
+                                            <img src="<?php echo PUBLIC_PATH.'img/iconod.png' ?>" alt="" width="80%">
+                                            <span class="count-title" style="color:#B1D234">amplio boulevard</span>
+                                        </center>
+                                    </a>
+                                <?php else: ?>
+                                    <a data-lightbox-gallery="gallery15" href="<?php echo PUBLIC_PATH.'files/upload/amenidades/Amplio-boulevard/'.$value->imagen ?>"></a>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            </p>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modelo 4-->
+<div id="modelos">
+    <div id="roble" class="nz-section horizontal autoheight-true animate-false full-width-true nz-custom-form" 
+    data-animation-speed="35000" data-parallax="false" style="width:80%;margin-bottom:10px;">
+    <div class="nz-row" style="border: 3px solid #fab82b;">
+            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12 custom-padding-on-mobile element-animate-false"
+            data-effect="none" data-align="left">
+            <div class="col-inner" style="padding-left:50px;padding-right:50px;padding-top:30px;padding-bottom:20px;">
+                <h2 style="font-size: 32px;color: #333333;line-height: 42px;text-align: left;text-transform:uppercase" 
+                class="vc_custom_heading">
+                    modelo roble
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=50763745392&text=Modelo Caoba" >
+                            <img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/whatsApp.png'?>" class="iconsHeader">
+                        </a>
+                    </span>
+                    <a href="https://goo.gl/maps/3map5TtvcCm" target="_black">
+                    <span><img style="margin-bottom: 9px;" 
+                    src="<?php echo PUBLIC_PATH.'img/icons/home.png' ?>" class="iconsHeader"></span>
+                    </a>
+                </h2>
+                <div class="sep-wrap element-animate element-animate-false left nz-clearfix" 
+                data-effect="none">
+                    <div class="nz-separator solid" 
+                    style="border-bottom-color:#ffb700;width:100px;
+                    border-bottom-width:2px;border-bottom-style:solid;
+                    margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                </div>
+                <div class='gap nz-clearfix' style='height:10px'>&nbsp;</div>
+                <ul style="list-style:none;padding-bottom:10px">
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>3 recamaras</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>2 baño</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>sala – comedor</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lavandería</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lotes desde 140.00 mts2</li>
+                    
+                </ul>
+                <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                    <a data-lightbox-gallery="gallery5" href="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/planos/plano-roble.png' ?>" class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" target="_self" data-effect="none" style="background:#B1D234;width:100%"><span class="txt">Plano</span></a>
+                </div>
+                <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                    <p>
+                        <a data-lightbox-gallery="gallery10" href="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/modelo-roble-1.jpeg' ?>" class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" target="_self" data-effect="none" style="background:#FFB700;color:#2E5629;width:100%"><span class="txt">Galería  </span></a>
+                        <a data-lightbox-gallery="gallery10" href="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/modelo-roble-2.jpg' ?>"></a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="display:flex;justify-content: center;">
+                
+                <div class="demo">
+                    <div class="rectangle-model">
+                        <h3>
+                            DESDE <br>55,500.00
+                        </h3>
+                    </div>
+                    <img src="<?php echo PUBLIC_PATH.'img/fondomovi.jpg' ?>" class="img-solidario">
+                    <ul class="lightSlider">
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/Modelo-Roble.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/modelo-roble-1.jpeg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/roble/modelo-roble-2.jpg' ?>">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+<!--modelo 1-->
+<div id="cala" 
+    class="nz-section horizontal autoheight-true animate-false full-width-true nz-custom-form" 
+    data-animation-speed="35000" data-parallax="false" style="width:80%;margin-bottom:10px;">
+    <div class="nz-row" style="border: 3px solid #fab82b;">
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="display:flex;justify-content: center;">
+                <div class="demo">
+                    <div class="rectangle-model">
+                        <h3>
+                            DESDE <br>65,000.00
+                        </h3>
+                    </div>
+                    <ul class="lightSlider">
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Modelo-Cala.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Cocina-Cala.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Cuarto-Cala-1.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Sala-Cala.jpg' ?>">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12 custom-padding-on-mobile element-animate-false" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="padding-left:50px;padding-right:50px;padding-top:30px;padding-bottom:20px;">
+                <h2 style="font-size: 32px;color: #333333;line-height: 42px;text-align: left;text-transform:uppercase" class="vc_custom_heading">
+                    modelo cala
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=50763745392&text=Modelo Cala" >
+                            <img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/whatsApp.png' ?>" class="iconsHeader">
+                        </a>
+                    </span>
+                    <a href="https://goo.gl/maps/3map5TtvcCm" target="_black">
+                        <span><img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/home.png' ?>" class="iconsHeader"></span>
+                    </a>
+                </h2>
+                <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                    <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                </div>
+                <div class='gap nz-clearfix' style='height:10px'>&nbsp;</div>
+                <div style="display:inline-flex;">
+                    <ul style="list-style:none;padding-bottom:10px;margin-right:15px;">
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>3 recamaras</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>1 baño</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>cocina con muebles de granito</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lavandería</li>
+                    </ul>
+                    <ul style="list-style:none;padding-bottom:10px">
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>sala – comedor</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>terraza techada</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>estacionamiento techado</li>
+                        <li style="line-height:16px;color:#333">
+                            <span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lotes desde 160.00 mts2</li>
+                    </ul>
+                </div>
+                    <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                            <a data-lightbox-gallery="gallery9" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/planos/plano-cala.png' ?>" 
+                            class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" 
+                            target="_self" data-effect="none" style="background:#B1D234;width:100%"><span class="txt">Plano</span></a>
+                    </div>
+                    <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">  
+                            <p>
+                                <a data-lightbox-gallery="gallery7" 
+                                href="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Cocina-Cala.jpg' ?>" 
+                                class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" 
+                                target="_self" data-effect="none" 
+                                style="background:#FFB700;color:#2E5629;width:100%"><span class="txt">Galería  </span></a>
+                                <a data-lightbox-gallery="gallery7" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Cuarto-Cala.jpg' ?>"></a>
+                                <a data-lightbox-gallery="gallery7" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Cuarto-Cala-1.jpg' ?>"></a>
+                                <a data-lightbox-gallery="gallery7" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cala/Sala-Cala.jpg' ?>"></a>
+                            </p>
+                    </div>                                                    
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--modelo 2-->
+    <div id="caoba" class="nz-section horizontal autoheight-true animate-false full-width-true nz-custom-form" 
+    data-animation-speed="35000" data-parallax="false" style="width:80%;margin-bottom:10px;">
+    <div class="nz-row" style="border: 3px solid #fab82b;">
+            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12 custom-padding-on-mobile element-animate-false"
+            data-effect="none" data-align="left">
+            <div class="col-inner" style="padding-left:50px;padding-right:50px;padding-top:30px;padding-bottom:20px;">
+                <h2 style="font-size: 32px;color: #333333;line-height: 42px;text-align: left;text-transform:uppercase" 
+                class="vc_custom_heading">
+                    modelo caoba
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=50763745392&text=Modelo Caoba" >
+                            <img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/whatsApp.png' ?>" class="iconsHeader">
+                        </a>
+                    </span>
+                    <a href="https://goo.gl/maps/3map5TtvcCm" target="_black">
+                    <span><img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/home.png' ?>" class="iconsHeader"></span>
+                    </a>
+                </h2>
+                <div class="sep-wrap element-animate element-animate-false left nz-clearfix" 
+                data-effect="none">
+                    <div class="nz-separator solid" 
+                    style="border-bottom-color:#ffb700;width:100px;
+                    border-bottom-width:2px;border-bottom-style:solid;
+                    margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                </div>
+                <div class='gap nz-clearfix' style='height:10px'>&nbsp;</div>
+                <ul style="list-style:none;padding-bottom:10px">
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>3 recamaras</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>1 baño</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>sala – comedor</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lavandería</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lotes desde 120.00 mts2</li>
+                    
+                </ul>
+                <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                    <a data-lightbox-gallery="gallery4" href="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/planos/plano-caoba.jpg' ?>" class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" target="_self" data-effect="none" style="background:#B1D234;width:100%"><span class="txt">Plano</span></a>
+                </div>
+                <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                    <p>
+                        <a data-lightbox-gallery="gallery3" 
+                        href="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba.jpg' ?>" 
+                        class="button button-normal turquoise 
+                        full-false small square animate-false 
+                        anim-type-ghost hover-fill element-animate-false" 
+                        target="_self" data-effect="none" 
+                        style="background:#FFB700;color:#2E5629;width:100%"><span class="txt">Galería  </span></a>
+                        <a data-lightbox-gallery="gallery3" href="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba-1.jpg' ?>"></a>
+                        <a data-lightbox-gallery="gallery3" href="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba-2.jpg' ?>"></a>
+                        <a data-lightbox-gallery="gallery3" href="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Sala-Caoba.jpg' ?>"></a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="display:flex;justify-content: center;">
+                
+                <div class="demo">
+                    <div class="rectangle-model">
+                        <h3>
+                            DESDE <br>49,990.00
+                        </h3>
+                    </div>
+                    <img src="<?php echo PUBLIC_PATH.'img/fondomovi.jpg' ?>" class="img-solidario">
+                    <ul class="lightSlider">
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Modelo-Caoba.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Sala-Caoba.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba-1.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba.jpg' ?>">
+                        </li>
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/caoba/Cuarto-Caoba-2.jpg' ?>">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <!--modelo 3-->
+    <div id="cedro" class="nz-section horizontal autoheight-true animate-false full-width-true nz-custom-form" 
+    data-animation-speed="35000" data-parallax="false" style="width: 80%;margin-bottom:10px;">
+    <div class="nz-row" style="border: 3px solid #fab82b;">
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="display:flex;justify-content: center;">
+
+                <div class="demo">
+                    <div class="rectangle-model">
+                        <h3>
+                            DESDE <br>53,000.00
+                        </h3>
+                    </div>
+                    <img src="<?php echo PUBLIC_PATH.'img/fondomovi.jpg' ?>" class="img-solidario">
+                    <ul class="lightSlider">
+                        <li>
+                            <img class="aligncenter size-full wp-image-6885 " 
+                            src="<?php echo PUBLIC_PATH.'files/upload/modelos/cedro/Modelo-Cedro.jpg'?>">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12 custom-padding-on-mobile element-animate-false" style="" data-effect="none" data-align="left">
+            <div class="col-inner" style="padding-left:50px;padding-right:50px;padding-top:30px;padding-bottom:20px;">
+                <h2 style="font-size: 32px;color: #333333;line-height: 42px;text-align: left;text-transform:uppercase" class="vc_custom_heading">
+                    modelo cedro
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=50763745392&text=Modelo Cedro" >
+                            <img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/whatsApp.png' ?>" class="iconsHeader">
+                        </a>
+                    </span>
+        <a href="https://goo.gl/maps/3map5TtvcCm" target="_black">
+        <span>
+            <img style="margin-bottom: 9px;" src="<?php echo PUBLIC_PATH.'img/icons/home.png' ?>" class="iconsHeader">
+        </span>
+        </a>
+                </h2>
+                <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                    <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                </div>
+                <div class='gap nz-clearfix' style='height:10px'>&nbsp;</div>
+                <ul style="list-style:none;padding-bottom:10px">
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>3 recamaras</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>1 baño</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>cocina</li>
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lavandería</li>
+                    
+                    <li style="line-height:16px;color:#333"><span class="icon icon-checkmark" style="color:#2E5629;padding-right:10px"></span>lotes desde 160.00 mts2</li>
+                    
+                </ul>
+                    <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">
+                            <a data-lightbox-gallery="gallery8" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cedro/planos/casacedro.png'?>" class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" target="_self" data-effect="none" style="background:#B1D234;width:100%"><span class="txt">Plano</span></a>
+                        </div>
+                        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-xs-12 col12" style="margin-bottom:0;">  
+                            <p>
+                                <a data-lightbox-gallery="gallery6" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cedro/img7.jpg'?>" 
+                                class="button button-normal turquoise full-false small square animate-false anim-type-ghost hover-fill element-animate-false" 
+                                target="_self" data-effect="none" 
+                                style="background:#FFB700;color:#2E5629;width:100%">
+                                <span class="txt">Galería  </span></a>
+                                <a data-lightbox-gallery="gallery6" href="<?php echo PUBLIC_PATH.'files/upload/modelos/cedro/planos/casacedro.png'?>">
+                                </a>
+                            </p>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="nz-section horizontal autoheight-false animate-false full-width-false nz-custom-filter-color" 
+data-animation-speed="35000" data-parallax="false" style="padding-top:30px;margin-top: 20px;background: #F2F2F2;">
+    <div class="container">
+        <div class="nz-row">
+            <style>
+                .plus{
+                    width: 60px;
+                    line-height: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                    margin: -30px 0 0 -30px;
+                    text-indent: -90000em;
+                    background-image: url(<?php echo PUBLIC_PATH.'img/plus.png' ?>);
+                    background-position: 48% 50%;
+                    background-repeat: no-repeat;
+                    background-color: rgba(0,0,0,0.7) !important;
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                    transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                    position: absolute;
+                    display: block;
+                    top: 95%;
+                    left: 50%;
+                }
+            </style>
+            <div class="col vc_col-sm-12">
+                <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12 col12">
+                    <div style="position:relative">
+                        <img src="<?php echo PUBLIC_PATH.'img/requisitos.jpg'?>" alt="" width="100%">
+                        <a href="#" class="btn-popup" data-imagen="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_1 ?>">
+                            <div class="plus" style=" background-color: #e9b52c !important;"></div>
+                        </a>
+                    </div> 
+                    <div style="padding-top:30px;">
+                        <h3 style="text-align:center;text-transform:uppercase">requisitos</h3>
+                    </div>
+                </div>
+                <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12 col12">
+                        <div style="position:relative">
+                        <img src="<?php echo PUBLIC_PATH.'img/fondo.png'?>" alt="" width="100%">
+                        <a href="#" class="btn-popup" data-imagen="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_2 ?>">
+                            <div class="plus" style=" background-color: #e9b52c !important;"></div>
+                        </a>
+                    </div> 
+                    <div style="padding-top:30px;">
+                        <h3 style="text-align:center;text-transform:uppercase">BONO SOLIDARIO</h3>
+                    </div>
+                </div>
+            
+                <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12 col12">
+                    <div style="position:relative">
+                        <img src="<?php echo PUBLIC_PATH.'img/propietarios-felices.png'?>" alt="" width="100%">
+                        <a href="#" class="btn-popup" data-imagen="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_3 ?>">
+                            <div class="plus" style=" background-color: #e9b52c !important;">
+                            </div>
+                        </a>
+                    </div> 
+                    <div style="padding-top:30px;">
+                        <h3 style="text-align:center;text-transform:uppercase">PROPIETARIOS FELICES</h3>
+                    </div>
+                </div>
+
+                <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12 col12">
+                    <div style="position:relative">
+                        <img src="<?php echo PUBLIC_PATH.'img/atencion-al-propietario.png' ?>" alt="" width="100%">
+                        <a href="#" class="btn-popup" data-imagen="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_4 ?>">
+                            <div class="plus" style=" background-color: #e9b52c !important;"></div>
+                        </a>
+                    </div> 
+                    <div style="padding-top:30px;">
+                        <h3 style="text-align:center;text-transform:uppercase">POST VENTAS</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="avances" class="nz-section horizontal autoheight-true animate-false full-width-false " data-animation-speed="35000" data-parallax="false" style="padding-top:20px;">
+        <div class="container" style="width:80%;">
+            <div class="nz-row">
+                <div class="col-sm-12" style="padding-bottom:30px">
+                    <div class="element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                        <div class="col-inner">
+                            <div class="nz-tabs  horizontal full-false">
+                                <div class="tabset nz-clearfix">
+                                    <div data-target="detalleproyecto" class="tab false" style="padding-top: 5px;padding-bottom: 0px;">
+                                        <h2 style="text-transform:uppercase;">AVANCE DE OBRA</h2>
+                                    </div>
+                                </div>
+                                <div class="tabs-container nz-clearfix">
+                                    <div id="detalleproyecto" class="tab-content">
+                                    <?php foreach ($avances as $key => $value): ?>    
+                                        <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-middle" style="" data-effect="none" data-align="left">
+                                            <div class="col-inner">
+                                                <img class="aligncenter size-full wp-image-6692 " 
+                                                src="<?php echo PUBLIC_PATH.'files/upload/avance-obras/'.$value->imagen ?>" width="100%">
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div id="quienes-somos" class="nz-section horizontal autoheight-true animate-false full-width-false " data-animation-speed="35000" data-parallax="false" style="padding-top:20px;">
+        <div class="container" style="width:80%;">
+            <div class="nz-row">
+                <div class="col-sm-12" style="padding-bottom:30px">
+                    <div class="element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                        <div class="col-inner">
+                            <div class="nz-tabs  horizontal full-false">
+                                <div class="tabset nz-clearfix">
+                                    <div data-target="detalleproyecto" class="tab false" style="padding-top: 5px;padding-bottom: 0px;">
+                                        <h2 style="text-transform:uppercase;">QUIENES SOMOS</h2>
+                                    </div>
+                                </div>
+                                <div class="tabs-container nz-clearfix">
+                                    <div id="detalleproyecto" class="tab-content">
+                                        <div class="col vc_col-sm-12 vc_col-lg-12 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                                            <div class="col-inner">
+                                                <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                                    <div class="nz-separator solid" style="border-bottom-color:#A7CC39;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-bottom:20px;">&nbsp;</div>
+                                                </div>
+                                                <div class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50">
+                                                    
+                                                <p style="text-align: left; line-height: 30px; font-size: 14px;">
+                                                <?php echo $quienessomos->texto ?> 
+                                                </p>
+                                                <p style="text-align: left; line-height: 30px; font-size: 14px;">Nuestra visión es de largo plazo, por eso trabajamos de la mano de la comunidad y de las autoridades para promover el desarrollo sostenible de las zonas donde operamos, y nuestro equipo está abocado a ofrecer un servicio de excelencia en todo momento a nuestros clientes.. </p>
+                                                <p style="text-align: left; line-height: 30px; font-size: 14px;">En nuestros 10 años de trayectoria en Panamá hemos desarrollado proyectos que se traducen en más de 1000 viviendas entregadas y por ende más de 5000 personas que hoy cuentan con un sueño hecho realidad.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div id="noticias" class="nz-section horizontal autoheight-false animate-false full-width-false nz-custom-filter-color" data-animation-speed="35000" data-parallax="false" style="background-color:#F5F5F5;padding-top:50px;padding-bottom:40px">
+    <div class="container">
+        <div class="nz-row">
+            <div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-2 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="center" data-margin="false">
+                <div class="col-inner" style=""></div>
+            </div>
+            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-8 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="left" data-margin="false">
+                <div class="col-inner" style="">
+                    <h2 style="font-size: 30px;color: #333333;line-height: 40px;text-align: center" class="vc_custom_heading">NOVEDADES Y NOTICIAS</h2>
+                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                        <div class="nz-separator solid" style="border-bottom-color:#A7CC39;width:100px;border-bottom-width:2px;border-bottom-style:solid;margin-top:20px;margin-bottom:20px;">&nbsp;</div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="blog-post blog-post-1 nz-clearfix">
+
+                    <?php foreach ($blogs as $key => $value): ?>
+                        <article data-grid="ninzio_01" class="col vc_col-sm-12 vc_col-lg-4 vc_col-md-4 vc_col-xs-12 col12 post-195 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-design tag-design tag-eva tag-external tag-free tag-logo tag-repairing tag-shopping tag-smart" id="post-195">
+                            <div class="nz-thumbnail"> 
+                                <div class="post-date-custom" style="background:#FFB700 !important;"><span>06</span><span>Jun</span></div>
+                                <img  src="<?php echo PUBLIC_PATH.'files/upload/blog/'.$value->id.'/'.$value->img_inicio ?>" class="wp-post-image" alt="" width="640" height="520"/>
+                                <div class="ninzio-overlay">
+                                    <a class="nz-overlay-before" title="ver" href="<?php echo PUBLIC_PATH.'blog/'. str_replace(' ', '-', $value->titulo) ?>"></a>
+                                </div>
+                            </div>
+                            <div class="post-body" style="padding-top:10px">
+                                <div class="post-body-in">
+                                    <h3 class="post-title" style="color:#2E5629;line-height:20px">
+                                        <a href="#" rel="bookmark">
+                                            <?php echo $value->title?>  
+                                        </a>
+                                    </h3>
+                                    <div class="post-excerpt" style="line-height:18px">
+                                    <?php echo $value->descripcion?>     
+                                    </div>
+                                    <a class="post-more" href="<?php echo PUBLIC_PATH.'blog/'. str_replace(' ', '-', $value->titulo) ?>">Leer mas</a>
+                                </div>
+                            </div>
+
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="nz-content" class='content nz-clearfix padding-false'>
+        <div class='container page-full-width'>
+        <!-- post start -->
+        <div id="contacto" class="page type-page status-publish hentry">
+            <section class="page-content nz-clearfix">
+                <div class="nz-section horizontal autoheight-false animate-false full-width-false nz-custom-form-color" data-animation-speed="35000" data-parallax="false" style="padding-top:50px;padding-bottom:70px;">
+                    <div class="container">
+                        <div class="nz-row">
+                            <div class="col vc_col-sm-12 vc_col-lg-8 vc_col-md-8 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                                <div class="col-inner" style="">
+                                    <h2 style="font-size: 20px;line-height: 30px;text-align: left" class="vc_custom_heading ninzio-latter-spacing">CONTACTO</h2>
+                                    <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                        <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:70px;border-bottom-width:2px;border-bottom-style:solid;margin-top:5px;margin-bottom:15px;">&nbsp;</div>
+                                    </div>
+                                    <div role="form" class="wpcf7" id="wpcf7-f4-p3172-o1" lang="en-US" dir="ltr">
+                                        <div class="screen-reader-response"></div>
+                                        <form id="contact-form" action="<?php echo PUBLIC_PATH.'contactSend/' ?>" method="POST">
+                                            <span class="wpcf7-form-control-wrap your-name vc_col-lg-6" style="padding:5px;padding-bottom:0;padding-left:0">
+                                                    <input name="name" id="name" type="text" value="" size="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" 
+                                                    aria-required="true" aria-invalid="false" placeholder="Nombre" required />
+                                            </span>
+                                            <span class="wpcf7-form-control-wrap your-email vc_col-lg-6" style="padding:5px;padding-bottom:0">
+                                                <input required name="mail" id="mail" type="text"  value="" size="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Correo electrónico "/>
+                                            </span>
+                                            <span class="wpcf7-form-control-wrap your-subject vc_col-lg-6" style="padding:5px;padding-bottom:0;padding-left:0">
+                                                <input required name="telefono" id="telefono" type="text" value="" size="" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Teléfono" />
+                                            </span>
+                                                <span class="wpcf7-form-control-wrap your-subject vc_col-lg-6" style="padding:5px;padding-bottom:0">
+                                                <select name="intereses" required id="intereses" class="wpcf7-form-control wpcf7-text">
+                                                    <option value="Estoy interesado en">Estoy interesado en</option>
+                                                    <option value="Modelo roble">Modelo roble</option>
+                                                    <option value="Modelo Cala">Modelo Cala</option>
+                                                    <option value="Modelo Caoba">Modelo Caoba</option>
+                                                    <option value="Modelo Cedro">Modelo Cedro</option>
+                                                    <option value="Pregunta General">Pregunta General</option>
+                                                </select>
+                                            </span>
+                                            <span class="wpcf7-form-control-wrap your-message vc_col-lg-12" style="padding:5px;padding-bottom:0;padding-left:0">
+                                                <textarea placeholder="Mensaje" name="comment" id="comment"  cols="" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
+                                                                                    
+                                                <input type="submit" value="Enviar"  style="background:#2E5629">
+                                                <div id="msg" class="message"></div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col vc_col-sm-12 vc_col-lg-4 vc_col-md-4 vc_col-xs-12 col12  element-animate-false valign-top" style="" data-effect="none" data-align="left">
+                                <div class="col-inner" style="">
+                                    <h2 style="font-size: 20px;line-height: 30px;text-align: left;text-transform:uppercase" class="vc_custom_heading ninzio-latter-spacing">Búscanos  POR</h2>
+                                    <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                        <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:70px;border-bottom-width:2px;border-bottom-style:solid;margin-top:5px;margin-bottom:15px;">&nbsp;</div>
+                                    </div>
+                                    <div style="" class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50">
+                                        <a href="https://www.waze.com/ul?ll=8.55521989%2C-80.71105957&navigate=yes&zoom=9" target="_blank">
+                                            <img src="<?php echo PUBLIC_PATH.'img/waze-logo.png' ?>" alt="" width="25px" style="margin-right:10px">
+                                        </a>
+                                            Urbanización la Valdeza
+                                        <br />
+                                        <div class='gap nz-clearfix' style='height:5px'>&nbsp;</div>
+                                        <a href="https://goo.gl/maps/3map5TtvcCm" target="_black" ><img src="<?php echo PUBLIC_PATH.'img/googlemaps.png' ?>" alt="" width="25px" style="margin-right:10px"></a>La Valdeza</div>
+                                    <div class='gap nz-clearfix' style='height:40px'>&nbsp;</div>
+                                    <h2 style="font-size: 20px;line-height: 30px;text-align: left;text-transform:uppercase" class="vc_custom_heading ninzio-latter-spacing">Datos de contacto</h2>
+        <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                        <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:70px;border-bottom-width:2px;border-bottom-style:solid;margin-top:5px;margin-bottom:15px;">&nbsp;</div>
+                                    </div>
+                                    <div style="" class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50">
+                                        <span class="nz-icon none small icon-phone animate-false" style="color:#2E5629;margin-right:10px"></span>
+                                        <a style="color:#333" href="tel:388-6630">388-6630/31/</a>
+                                        <br />
+                                        <span class="nz-icon none small icon-phone animate-false" style="color:#2E5629;margin-right:10px"></span>
+                                        <a style="color:#333" href="tel:6374-5392">6374-5392</a>
+                                        <br />
+                                        <div class='gap nz-clearfix' style='height:5px'>&nbsp;</div>
+                                            <span class="nz-icon none small icon-envelope animate-false" style="color:#2E5629;margin-right:10px;font-size:12px"></span><a href="mailto:info@grupoti.com" style="color:#333">info@grupoti.com</a>
+                                        
+                                        </div>
+
+                            
+
+                                    
+                                    <div class='gap nz-clearfix' style='height:40px'>&nbsp;</div>
+                                    <h2 style="font-size: 20px;line-height: 30px;text-align: left;text-transform:uppercase" class="vc_custom_heading ninzio-latter-spacing">redes sociales</h2>
+                                    <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                        <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:70px;border-bottom-width:2px;border-bottom-style:solid;margin-top:5px;margin-bottom:25px;">&nbsp;</div>
+                                    </div>
+                                    <div class="nz-sl social-links nz-clearfix left">
+                                        <a class="icon-facebook" href="http://facebook.com/promotoralavaldeza" target="_self"></a>
+                                        <a class="icon-instagram" href="https://www.instagram.com/promotoralavaldeza/" target="_self"></a>
+                                        <a class="icon-youtube" href="https://www.youtube.com/channel/UCpbsDzJk_xWK1CUeka-A3bQ" target="_self"></a>
+                                    </div>
+
+                                    <div class='gap nz-clearfix' style='height:40px'>&nbsp;</div>
+                                    <h2 style="font-size: 20px;line-height: 30px;text-align: left;text-transform:uppercase" class="vc_custom_heading ninzio-latter-spacing">Aceptamos pagos con</h2>
+                                    <div class="sep-wrap element-animate element-animate-false left nz-clearfix" data-effect="none">
+                                        <div class="nz-separator solid" style="border-bottom-color:#ffb700;width:70px;border-bottom-width:2px;border-bottom-style:solid;margin-top:5px;margin-bottom:25px;">&nbsp;</div>
+                                    </div>
+                                    <div class="nz-sl social-links nz-clearfix left">
+                                        <img src="<?php echo PUBLIC_PATH.'img/tarjetas.png' ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+        <!-- post end -->
+    </div>
+</div>

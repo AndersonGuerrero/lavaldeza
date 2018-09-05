@@ -1,0 +1,64 @@
+<br>
+<!-- Callout -->
+<div class="callout callout-danger fade in">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <h5>Importante!</h5>
+  <p>Tome en cuenta las medidas indicadas para cada imagen, recuerde si no sigue estas reglas implicara una incorrecta visualizacion en la pagina.</p>
+  <p><?php View::content() ?></p>
+</div>
+      <!-- /callout -->
+    <!-- WYSIWYG editor -->
+<form class="block" action="" enctype="multipart/form-data" method="POST" role="form">
+  <h6><i class="icon-pencil"></i>Sección mas</h6>
+  <input type="hidden" name="seccionmas[id]" value="<?php echo $seccionmas->id ?>">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="form-group">
+        <img src="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_1 ?>" alt="" width="100%">
+      </div>
+      <div class="form-group">
+        <label>Imagen Requisitos (500x600) recomendado </label>
+        <input accept="image/jpeg,image/gif,image/x-png"
+         type="file" class="styled" name="img_popup_1" id="adjunto">
+       </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="form-group">
+          <img src="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_2 ?>" alt="" width="100%">
+        </div>
+        <div class="form-group">
+          <label>Imagen Bono solidario (500x600) recomendado </label>
+          <input accept="image/jpeg,image/gif,image/x-png"
+           type="file" class="styled" name="img_popup_2" id="adjunto">
+         </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="form-group">
+          <img src="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_3 ?>" alt="" width="100%">
+        </div>
+        <div class="form-group">
+          <label>Imagen Propietarios felices (500x600) recomendado </label>
+          <input accept="image/jpeg,image/gif,image/x-png"
+           type="file" class="styled" name="img_popup_3" id="adjunto">
+         </div>
+      </div>
+      <div class="col-xs-3">
+          <div class="form-group">
+            <img src="<?php echo PUBLIC_PATH.'files/upload/seccion-mas/'.$seccionmas->img_popup_4 ?>" alt="" width="100%">
+          </div>
+          <div class="form-group">
+            <label>Imagen Post ventas (500x600) recomendado </label>
+            <input accept="image/jpeg,image/gif,image/x-png"
+             type="file" class="styled" name="img_popup_4" id="adjunto">
+           </div>
+        </div>
+  </div>
+  <div class="text-right">
+    <button type="reset" class="btn btn-danger">Cancelar</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+
+</form>
+<script>
+	$('.jqte').jqte();
+</script>

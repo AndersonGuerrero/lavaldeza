@@ -1,0 +1,44 @@
+<br>
+<!-- sliders table -->
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title"><i class="icon-paragraph-justify2"></i> Listado de Sliders</h6>
+          <a class="btn btn-primary" style="float:right;" href="<?php echo PUBLIC_PATH.'admin/nuevo_slider/' ?>">
+            <i class="icon-plus"></i> Nuevo Sliders
+          </a>
+        </div>
+          <div class="datatable-tasks">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th class="task-tools text-center">Imagen</th>
+                          <th class="task-tools text-center">Editar</th>
+                          <th class="task-tools text-center">Eliminar</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($sliders as $key => $value): ?>
+                      <tr>
+                        <td class="text-center">
+                          <img src="<?php echo PUBLIC_PATH.'files/upload/slider/'.$value->imagen ?>" alt="" width="40px">
+                        </td>
+
+                        <td class="text-center">
+                          <div class="btn-group">
+                              <a href="<?php echo PUBLIC_PATH.'admin/editar_slider/'.$value->id.'/' ?>" class="btn btn-icon btn-success">
+                                <i class="icon-quill2"></i>
+                              </a>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="btn-group">
+                              <a href="<?php echo PUBLIC_PATH.'admin/eliminar_slider/'.$value->id.'/' ?>" class="btn btn-icon btn-danger"><i class="icon-remove"></i></a>
+                          </div>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+<!-- /sliders table -->

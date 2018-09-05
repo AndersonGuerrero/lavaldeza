@@ -1,0 +1,43 @@
+<br>
+<!-- Callout -->
+<div class="callout callout-danger fade in">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <h5>Importante!</h5>
+  <p>Tome en cuenta las medidas indicadas para cada imagen, recuerde si no sigue estas reglas implicara una incorrecta visualizacion en la pagina.</p>
+</div>
+      <!-- /callout -->
+    <!-- WYSIWYG editor -->
+<form class="block" action="" enctype="multipart/form-data" method="POST" role="form">
+  <h6><i class="icon-pencil"></i>Editar foto</h6>
+  <input type="hidden" name="galeria[id]" value="<?php echo $galeria->id ?>">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="block">
+        <div class="thumbnail thumbnail-boxed">
+          <div class="thumb">
+          <img alt="" src="<?php echo PUBLIC_PATH.'files/upload/galeria/'.$galeria->imagen ?>">
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-9 col-md-6 col-sm-6">
+    <div class="form-group">
+      <select required class="form-control" name="galeria[categoria]">
+        <option value="">Categoria</option>
+        <option <?php  if($galeria->categoria == 'Promoviendo Salud') echo 'selected' ?> value="Promoviendo Salud">Promoviendo Salud</option>
+        <option <?php  if($galeria->categoria == 'Mejorando Vidas') echo 'selected' ?> value="Mejorando Vidas">Mejorando Vidas</option>
+        <option <?php  if($galeria->categoria == 'Diva') echo 'selected' ?> value="Diva">Diva</option>
+        <option <?php  if($galeria->categoria == 'Model') echo 'selected' ?> value="Model">Model</option>
+        <option <?php  if($galeria->categoria == 'Estilo de Vida') echo 'selected' ?> value="Estilo de Vida">Estilo de Vida</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Imagen (600x900)</label>
+      <input accept="image/jpeg,image/gif,image/x-png" required type="file" class="styled" name="imagen_selected" id="adjunto">
+    </div>
+  </div>
+  <div class="text-right">
+    <button type="reset" class="btn btn-danger">Cancelar</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+
+</form>

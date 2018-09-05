@@ -1,0 +1,74 @@
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-content">
+
+    <!-- User dropdown -->
+    <div class="user-menu dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="<?php echo PUBLIC_PATH.'img/logo.png'?>">
+        <div class="user-info">
+          La valdeza <span>Administrador</span>
+        </div>
+      </a>
+
+    </div>
+    <!-- /user dropdown -->
+
+
+    <!-- Main navigation -->
+    <?php $url = $_SERVER['PATH_INFO'] ?>
+    <ul class="navigation">
+      <li><a href="#">
+        <span>Configuraciones Generales </span> <i class="icon-cogs"></i></a>
+      </li>
+      <li <?php if('/admin' == $url) echo "class='active'"?> >
+        <a href="<?php echo PUBLIC_PATH.'admin'?>">
+        <span>Inicio</span> <i class="icon-screen2"></i></a>
+      </li>
+      <li <?php if('/admin/nuevo_blog' == $url) echo "class='active'"?> >
+        <a
+          href="<?php echo PUBLIC_PATH.'admin/nuevo_blog'?>">
+          <span>Nuevo blog</span> <i class="icon-plus"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/sliders' == $url or '/admin/nuevo_slider/' == $url ) echo "class='active'"?> >
+        <a href="<?php echo PUBLIC_PATH.'admin/sliders'?>">
+          <span>Sliders</span> <i class="icon-images"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/el_proyecto/' == $url) echo "class='active'"?>>
+        <a href="<?php echo PUBLIC_PATH.'admin/el_proyecto/'?>">
+          <span>El proyecto</span> <i class="icon-plus"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/amenidades' == $url) echo "class='active'"?>>
+        <a href="<?php echo PUBLIC_PATH.'admin/amenidades'?>">
+          <span>Amenidades</span> <i class="icon-images"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/seccion_mas' == $url) echo "class='active'"?>>
+        <a href="<?php echo PUBLIC_PATH.'admin/seccion_mas'?>">
+          <span>Seccion Mas</span> <i class="icon-plus"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/avances' == $url) echo "class='active'"?>>
+        <a href="<?php echo PUBLIC_PATH.'admin/avances'?>">
+          <span>Avances</span> <i class="icon-plus"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/quienes_somos' == $url) echo "class='active'"?>>
+        <a href="<?php echo PUBLIC_PATH.'admin/quienes_somos'?>">
+          <span>Quienes somos</span> <i class="icon-plus"></i>
+        </a>
+      </li>
+      <li <?php if('/admin/contacto/' == $url) echo "class='active'"?> >
+        <a href="<?php echo PUBLIC_PATH.'admin/contacto/'?>">
+          <span>Datos de contacto</span> <i class="icon-book"></i>
+        </a>
+      </li>
+    </ul>
+    <!-- /main navigation -->
+
+  </div>
+</div>
+<!-- /sidebar -->

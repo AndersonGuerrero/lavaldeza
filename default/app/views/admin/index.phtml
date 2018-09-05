@@ -1,0 +1,58 @@
+<!-- Page header -->
+<div class="page-header">
+  <div class="page-title">
+    <h3>
+      <small>Bienvenida al panel administrativo, cualquier inconveniente comunicate con nosotros</small></h3>
+  </div>
+</div>
+<!-- /page header -->
+
+<!-- Tasks table -->
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title"><i class="icon-paragraph-justify2"></i> Listado de Blogs</h6>
+        </div>
+          <div class="datatable-tasks">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th class="task-tools text-center">Imagen</th>
+                          <th>Nombre</th>
+                          <th>Descripcion</th>
+                          <th class="task-date-added">Fecha</th>
+                          <th class="task-tools text-center">Editar</th>
+                          <th class="task-tools text-center">Eliminar</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($blogs as $key => $value): ?>
+                      <tr>
+                        <td class="text-center">
+                          <img src="<?php echo PUBLIC_PATH.'files/upload/blog/'.$value->id.'/'.$value->img_inicio ?>" alt="" width="40px"></td>
+                        <td class="task-desc">
+                          <span style="color:#333"><?php echo $value->titulo?></span>
+                        </td>
+                        <td class="task-desc">
+                          <span style="color:#333"><?php echo $value->descripcion?></span>
+                        </td>
+                        <td><?php echo $value->fecha?></td>
+
+                      <td class="text-center">
+                        <div class="btn-group">
+                             <a href="<?php echo PUBLIC_PATH.'admin/editar_blog/'.$value->id.'/' ?>" class="btn btn-icon btn-success">
+                               <i class="icon-quill2"></i>
+                             </a>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                             <a href="<?php echo PUBLIC_PATH.'admin/eliminar_blog/'.$value->id.'/' ?>" class="btn btn-icon btn-danger"><i class="icon-remove"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+<!-- /tasks table -->
